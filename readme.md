@@ -33,3 +33,15 @@ All experiments are conducted using a minimal, highly interpretable 1-layer Tran
 
 ### Reproducibility Note regarding $L_2$ Normalization
 Section 3.2 of the paper notes a theoretical $\epsilon=10^{-8}$ for the spherical normalization step to ensure numerical stability. In this codebase, we utilize PyTorch's native `torch.nn.functional.normalize`, which defaults to `eps=1e-12`. This difference is purely a default floating-point stabilizer and does not affect the geometry or training dynamics described in the text.
+
+## Errata (v1)
+
+**Naming clarification for Spherical Norm vs Fully Bounded configurations:**
+
+In the current manuscript, the "Fully Bounded Spherical Topology" is described as introducing unembedding normalization as an additional architectural step beyond the "Spherical Norm" variant. In practice, **both configurations share the identical bounded architecture**: L2-normalized residual stream + on-the-fly normalized unembedding matrix + fixed temperature scaling (τ = 10.0). Without unembedding normalization, all spherical models exhibited Softmax Collapse and training instability, making it a necessary component of any spherical configuration.
+
+The **only difference** between the two reported configurations is the weight decay setting:
+- **Spherical Norm (λ = 1.0):** Bounded spherical architecture **with** weight decay
+- **Fully Bounded (λ = 0.0):** Bounded spherical architecture **without** weight decay
+
+This will be corrected in v2 of the paper. The experimental results, training logs, and all conclusions remain unchanged.
