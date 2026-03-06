@@ -28,7 +28,7 @@ We also provide the code for our non-commutative $S_5$ permutation composition n
 All experiments are conducted using a minimal, highly interpretable 1-layer Transformer architecture. The codebase is structured as Jupyter Notebooks for easy reproduction and visualization:
 
 * `Final_Modular_Norm_Baselines.ipynb` - Trains standard baselines (LayerNorm, RMSNorm) against spherical topologies with standard weight decay on the $\mathbb{Z}_{113}$ task.
-* `Final_Modular_No_Decay.ipynb` - Implements the **Fully Bounded Spherical Topology** ($\lambda=0.0$) demonstrating the $\sim25\times$ acceleration.
+* `Final_Modular_No_Decay.ipynb` - Implements the **Fully Bounded Spherical Topology** ($\lambda=0.0$) demonstrating the $\sim25\times$ acceleration. Decay is set 1.0 as default. You can set it 0.0 simply.
 * `Final_No_attention_all_models.ipynb` - Implements the **Uniform Attention Ablation** (CBOW aggregator) to test the necessity of data-dependent routing.
 * `Fourier_Analysis_Last.ipynb` - Generates the spectral analysis and Fraction of Variance Explained (FVE) metrics reported in Section 4.3 to verify the underlying Fourier circuits.
 
