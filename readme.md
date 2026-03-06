@@ -35,13 +35,20 @@ All experiments are conducted using a minimal, highly interpretable 1-layer Tran
 Section 3.2 of the paper notes a theoretical $\epsilon=10^{-8}$ for the spherical normalization step to ensure numerical stability. In this codebase, we utilize PyTorch's native `torch.nn.functional.normalize`, which defaults to `eps=1e-12`. This difference is purely a default floating-point stabilizer and does not affect the geometry or training dynamics described in the text.
 
 ## Errata (v1)
+We identified a labeling error and a missing architectural clarification in v1 of the manuscript. All experimental results remain valid; the corrections concern how configurations were named and described. The core findings — that bounded spherical topology massively accelerates generalization over standard baselines — are unchanged.
 
-**Naming clarification for Spherical Norm vs Fully Bounded configurations:**
+---
 
-In the current manuscript, the "Fully Bounded Spherical Topology" is described as introducing unembedding normalization as an additional architectural step beyond the "Spherical Norm" variant. In practice, **both configurations share the identical bounded architecture**: L2-normalized residual stream + on-the-fly normalized unembedding matrix + fixed temperature scaling (τ = 10.0). Without unembedding normalization, all spherical models exhibited Softmax Collapse and training instability, making it a necessary component of any spherical configuration.
+### 1. Architectural Clarification
 
-The **only difference** between the two reported configurations is the weight decay setting:
-- **Spherical Norm (λ = 1.0):** Bounded spherical architecture **with** weight decay
-- **Fully Bounded (λ = 0.0):** Bounded spherical architecture **without** weight decay
+In v1, "Spherical Norm" and "Fully Bounded" are described as two distinct architectures, with the implication that Spherical Norm uses an **unconstrained** unembedding layer. This is incorrect.
 
-This will be corrected in v2 of the paper. The experimental results, training logs, and all conclusions remain unchanged.
+**Both configurations share the identical architecture:**
+- L2-normalized residual stream
+- On-the-fly normalized unembedding matrix
+- Fixed temperature scaling (τ = 10.0)
+
+Without unembedding normalization, all spherical models exhibited Softmax Collapse and training instability, making it a necessary component of any spherical configuration. The **only difference** between the two reported configurations is the weight decay setting (λ).
+
+This affects six passages in the manuscript (Abstract, Introduction §1, §3.2, §4.1, §4.3 twice) that incorrectly describe the Spherical Norm variant as having an unconstrained unembedding. These will be corrected in v2.
+
