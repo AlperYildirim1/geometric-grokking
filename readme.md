@@ -1,6 +1,6 @@
 # The Geometric Inductive Bias of Grokking: Bypassing Phase Transitions via Architectural Topology
 
-[![arXiv](https://img.shields.io/badge/arXiv-Pending-b31b1b.svg)]([https://arxiv.org/](https://arxiv.org/abs/2603.05228))
+[![arXiv](https://img.shields.io/badge/arXiv-2603.05228-b31b1b.svg)](https://arxiv.org/abs/2603.05228)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?logo=PyTorch&logoColor=white)](https://pytorch.org/)
