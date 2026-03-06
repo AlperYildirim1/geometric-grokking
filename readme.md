@@ -20,8 +20,6 @@ We also provide the code for our non-commutative $S_5$ permutation composition n
 1. **Fully Bounded Spherical Topology (Intervention A):** Replaces standard LayerNorm/RMSNorm with strict $L_2$ normalization across the residual stream and the unembedding matrix. This restricts the model to a bounded cosine geometry, mathematically preventing Softmax Collapse and magnitude-driven memorization.
 2. **Uniform Attention Ablation (Intervention B):** Overrides learned query-key routing with a fixed uniform distribution, reducing the attention mechanism to a Continuous Bag-of-Words (CBOW) aggregator. 
 
-![Main Results Placeholder](https://via.placeholder.com/800x400.png?text=Insert+Your+Figure+1+Here)
-
 ## Repository Structure
 
 All experiments are conducted using a minimal, highly interpretable 1-layer Transformer architecture. The codebase is structured as Jupyter Notebooks for easy reproduction and visualization:
