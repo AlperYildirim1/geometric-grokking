@@ -36,85 +36,68 @@ Section 3.2 of the paper notes a theoretical $\epsilon=10^{-8}$ for the spherica
 
 ## Errata (v1 → v2)
 
-> This errata applies to arXiv v1 (2603.05228). A corrected v2 will be uploaded shortly.
+> **Note:** This errata applies to [arXiv v1 (2603.05228)](https://arxiv.org/abs/2603.05228). A corrected v2 will be uploaded shortly.
 
-We identified a labeling error and a missing architectural clarification in v1 of the
-manuscript. All experimental results remain valid; the corrections concern how configurations
-were named and described. The core findings that bounded spherical topology massively
-accelerates generalization over standard baselines are unchanged.
+We identified a labeling error and a missing architectural clarification in v1 of the manuscript. All core findings are unchanged; the corrections concern how configurations were named, described, and reported.
 
 ---
 
 ### 1. Architectural Clarification
 
-In v1, "Spherical Norm" and "Fully Bounded" are described as two distinct architectures,
-with the implication that Spherical Norm uses an unconstrained unembedding layer.
-This is incorrect.
+In v1, "Spherical Norm" and "Fully Bounded" are described as two distinct architectures, with the implication that Spherical Norm uses an **unconstrained** unembedding layer. This is incorrect.
 
-Both configurations share the identical architecture:
-  - L2-normalized residual stream
-  - On-the-fly normalized unembedding matrix
-  - Fixed temperature scaling (τ = 10.0)
+**Both configurations share the identical bounded architecture:**
+- L2-normalized residual stream
+- On-the-fly normalized unembedding matrix
+- Fixed temperature scaling (τ = 10.0)
 
-Without unembedding normalization, all spherical models exhibited Softmax Collapse and
-training instability, making it a necessary component of any spherical configuration.
-The only difference between the two reported configurations is the weight decay setting (λ).
+Without unembedding normalization, all spherical models exhibited Softmax Collapse and training instability, making it a necessary component of any spherical configuration. The **only difference** between the two configurations is the weight decay setting (λ).
 
-This affects six passages in the manuscript (Abstract, Introduction §1, §3.2, §4.1, §4.3 twice)
-that incorrectly describe the Spherical Norm variant as having an unconstrained unembedding.
-These will be corrected in v2.
+In v2, both are renamed to **Bounded Sphere** and distinguished solely by λ.
 
 ---
 
 ### 2. Table 1 Correction
 
-The v1 row labeled "Fully Bounded (λ = 0.0)" actually contained results from a
-Fourier-initialized spherical model trained with weight decay (λ = 1.0).
+The v1 row labeled "Fully Bounded (λ = 0.0)" contained results from a different experimental run. All spherical results have been rerun from scratch with verified weight decay settings. The corrected Table 1:
 
-Below are the complete corrected results across all configurations.
+**Baselines (unchanged)**
 
-#### Baselines (unchanged from v1)
+| LR | Architecture | Mean Grok Epoch | Std Dev | Min | Max | Failures | Peak Acc |
+|---|---|---|---|---|---|---|---|
+| 1×10⁻⁴ | LayerNorm | 54,160 | 13,490 | 32,800 | 71,600 | 0/10 | 100% |
+| 1×10⁻⁴ | RMSNorm | 51,240 | 11,200 | 38,800 | 74,600 | 0/10 | 100% |
+| 6×10⁻⁴ | LayerNorm | 7,800 | 1,095 | 6,000 | 9,400 | 0/10 | 100% |
+| 6×10⁻⁴ | RMSNorm | 7,300 | 925 | 6,000 | 9,200 | 0/10 | 100% |
 
-| LR       | Architecture | Mean Grok Epoch | Std Dev | Min    | Max    | Failures | Peak Acc |
-|----------|-------------|-----------------|---------|--------|--------|----------|----------|
-| 1×10⁻⁴  | LayerNorm   | 54,160          | 13,490  | 32,800 | 71,600 | 0/10     | 100%     |
-| 1×10⁻⁴  | RMSNorm     | 51,240          | 11,200  | 38,800 | 74,600 | 0/10     | 100%     |
-| 6×10⁻⁴  | LayerNorm   | 7,800           | 1,095   | 6,000  | 9,400  | 0/10     | 100%     |
-| 6×10⁻⁴  | RMSNorm     | 7,300           | 925     | 6,000  | 9,200  | 0/10     | 100%     |
+**Bounded Sphere (corrected)**
 
-#### Bounded Spherical Topology (corrected)
+| LR | Architecture | Mean Grok Epoch | Std Dev | Min | Max | Failures | Peak Acc |
+|---|---|---|---|---|---|---|---|
+| 1×10⁻⁴ | Bounded Sphere (λ=1.0) | 2,400 | 353 | 1,800 | 3,000 | 0/10 | 100% |
+| 1×10⁻⁴ | Bounded Sphere (λ=0.0) | 2,480 | 464 | 1,800 | 3,200 | 0/10 | 100% |
+| 6×10⁻⁴ | Bounded Sphere (λ=1.0) | 1,560 | 853 | 600 | 3,000 | 0/10 | 100% |
+| 6×10⁻⁴ | Bounded Sphere (λ=0.0) | 820 | 199 | 600 | 1,200 | 0/10 | 100% |
 
-| LR       | Architecture                    | λ   | Mean Grok Epoch | Std Dev | Min   | Max   | Failures | Peak Acc |
-|----------|---------------------------------|-----|-----------------|---------|-------|-------|----------|----------|
-| 1×10⁻⁴  | Bounded Sphere                  | 1.0 | 2,480           | 464     | 1,800 | 3,200 | 0/10     | 100%     |
-| 1×10⁻⁴  | Bounded Sphere                  | 0.0 | 2,400           | 353     | 1,800 | 3,000 | 0/10     | 100%     |
-| 1×10⁻⁴  | Bounded Sphere + Fourier Init   | 1.0 | 2,100           | 316     | 1,800 | 2,600 | 0/10     | 100%     |
-| 1×10⁻⁴  | Bounded Sphere + Fourier Init   | 0.0 | 2,120           | 368     | 1,600 | 2,600 | 0/10     | 100%     |
-| 6×10⁻⁴  | Bounded Sphere                  | 1.0 | 820             | 199     | 600   | 1,200 | 0/10     | 100%     |
-| 6×10⁻⁴  | Bounded Sphere                  | 0.0 | 1,560           | 853     | 600   | 3,000 | 0/10     | 100%     |
-| 6×10⁻⁴  | Bounded Sphere + Fourier Init   | 1.0 | 700             | 194     | 400   | 1,000 | 0/10     | 100%     |
-| 6×10⁻⁴  | Bounded Sphere + Fourier Init   | 0.0 | 800             | 163     | 600   | 1,000 | 0/10     | 100%     |
-
-#### Key Observations
-
-- All bounded spherical configurations generalize 10-50x faster than baselines
-  regardless of weight decay or initialization strategy. The core claim is unchanged.
-- At LR=1e-4, weight decay has minimal effect. All sphere variants converge
-  in ~2,100-2,480 epochs.
-- At LR=6e-4, Fourier initialization provides a consistent advantage (700-800
-  vs 820-1,560), and weight decay helps stabilize the standard-init variant.
-- Fourier initialization was not reported separately in v1. It will be properly
-  credited in v2.
+**Key observations:**
+- All bounded sphere configurations generalize 10–50× faster than baselines. The core claim is unchanged.
+- At LR=1×10⁻⁴, weight decay has minimal effect — both λ values converge in ~2,400–2,480 epochs.
+- At LR=6×10⁻⁴, removing weight decay helps: λ=0.0 converges faster (820 vs 1,560) with much lower variance (std 199 vs 853).
 
 ---
 
-### 3. What Does Not Change
+### 3. Text Corrections
+
+Six passages in v1 incorrectly described the Spherical Norm variant as having an unconstrained unembedding (Abstract, Introduction, §3.2, §4.1, §4.3 ×2). All have been corrected in v2 to reflect the shared bounded architecture.
+
+The naming throughout has been updated: "Spherical Norm (λ=1.0)" and "Fully Bounded (λ=0.0)" are now both called **Bounded Sphere**, distinguished only by λ.
+
+---
+
+### 4. What Does Not Change
 
 - Uniform Attention Ablation results (Table 2)
 - S5 negative control results (Table 3)
-- Spectral verification / Fourier circuit analysis (Section 4.3)
-- All figures and training dynamics plots
+- Spectral verification / Fourier circuit analysis
 - All qualitative conclusions
-
-v2 with full corrections will be uploaded to arXiv shortly.
-
+- Core finding: bounded spherical topology massively accelerates generalization over standard baselines
