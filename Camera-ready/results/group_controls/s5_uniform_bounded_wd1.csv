@@ -1,0 +1,6 @@
+condition,model_type,head_type,attention,weight_decay,lr,seed,train_epoch_95,train_epoch_99,test_epoch_95,test_epoch_99,test_rise_onset,gap_99,onset_minus_train_99,peak_test_acc,final_train_acc,last_epoch,stop_reason,minutes
+sphere_bounded_wd1_uniform,spherical,bounded,uniform,1.0,0.001,1,400,900,,,,,,0.04156745970249176,0.9990740418434143,99999,max_epochs,0.8
+sphere_bounded_wd1_uniform,spherical,bounded,uniform,1.0,0.001,2,600,2200,,,,,,0.02777777798473835,0.9993055462837219,99999,max_epochs,8.4
+sphere_bounded_wd1_uniform,spherical,bounded,uniform,1.0,0.001,3,1300,10100,,,,,,0.03432539850473404,0.9907407164573669,99999,max_epochs,8.4
+sphere_bounded_wd1_uniform,spherical,bounded,uniform,1.0,0.001,4,500,1000,74300.0,77500.0,42000.0,76500.0,41000.0,0.9997023940086365,1.0,79600,stable_test_99_post_grace,6.7
+sphere_bounded_wd1_uniform,spherical,bounded,uniform,1.0,0.001,5,700,1100,,,36500.0,,35400.0,0.8180555701255798,1.0,99999,max_epochs,8.4

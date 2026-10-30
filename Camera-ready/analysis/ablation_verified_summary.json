@@ -1,0 +1,202 @@
+[
+  {
+    "residual": "layernorm",
+    "head": "bounded",
+    "wd": 0,
+    "n": 3,
+    "success": 0,
+    "test99": [
+      null,
+      null
+    ],
+    "gap99": [
+      null,
+      null
+    ],
+    "peak_range": [
+      0.05436849966645241,
+      0.16310550272464752
+    ],
+    "budgets": [
+      60000
+    ],
+    "intervals": [
+      "[49, 50]"
+    ]
+  },
+  {
+    "residual": "layernorm",
+    "head": "raw",
+    "wd": 0,
+    "n": 3,
+    "success": 0,
+    "test99": [
+      null,
+      null
+    ],
+    "gap99": [
+      null,
+      null
+    ],
+    "peak_range": [
+      0.017563486471772194,
+      0.05380915105342865
+    ],
+    "budgets": [
+      60000
+    ],
+    "intervals": [
+      "[49, 50]"
+    ]
+  },
+  {
+    "residual": "spherical",
+    "head": "bounded",
+    "wd": 0,
+    "n": 3,
+    "success": 3,
+    "test99": [
+      1750,
+      1385.641
+    ],
+    "gap99": [
+      1400,
+      1385.641
+    ],
+    "peak_range": [
+      1,
+      1
+    ],
+    "budgets": [
+      60000
+    ],
+    "intervals": [
+      "[50]"
+    ]
+  },
+  {
+    "residual": "spherical",
+    "head": "raw",
+    "wd": 0,
+    "n": 3,
+    "success": 0,
+    "test99": [
+      null,
+      null
+    ],
+    "gap99": [
+      null,
+      null
+    ],
+    "peak_range": [
+      0.3221836984157562,
+      0.5586754679679871
+    ],
+    "budgets": [
+      60000
+    ],
+    "intervals": [
+      "[49, 50]"
+    ]
+  },
+  {
+    "residual": "layernorm",
+    "head": "bounded",
+    "wd": 1,
+    "n": 10,
+    "success": 10,
+    "test99": [
+      6205,
+      1042.819
+    ],
+    "gap99": [
+      5490,
+      968.045
+    ],
+    "peak_range": [
+      0.9972032904624939,
+      1
+    ],
+    "budgets": [
+      30000
+    ],
+    "intervals": [
+      "[50]"
+    ]
+  },
+  {
+    "residual": "layernorm",
+    "head": "raw",
+    "wd": 1,
+    "n": 3,
+    "success": 3,
+    "test99": [
+      7233.333,
+      1096.966
+    ],
+    "gap99": [
+      6966.667,
+      1102.648
+    ],
+    "peak_range": [
+      1,
+      1
+    ],
+    "budgets": [
+      60000
+    ],
+    "intervals": [
+      "[50]"
+    ]
+  },
+  {
+    "residual": "spherical",
+    "head": "bounded",
+    "wd": 1,
+    "n": 3,
+    "success": 3,
+    "test99": [
+      883.333,
+      416.333
+    ],
+    "gap99": [
+      483.333,
+      416.333
+    ],
+    "peak_range": [
+      1,
+      1
+    ],
+    "budgets": [
+      5000
+    ],
+    "intervals": [
+      "[50]"
+    ]
+  },
+  {
+    "residual": "spherical",
+    "head": "raw",
+    "wd": 1,
+    "n": 3,
+    "success": 3,
+    "test99": [
+      4000,
+      1937.137
+    ],
+    "gap99": [
+      2166.667,
+      1400.298
+    ],
+    "peak_range": [
+      1,
+      1
+    ],
+    "budgets": [
+      60000
+    ],
+    "intervals": [
+      "[50]"
+    ]
+  }
+]

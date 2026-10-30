@@ -1,0 +1,82 @@
+[
+  {
+    "file": "notebooks/rebuttal/S5_Uniform_Attention_Decoupled_Head.ipynb",
+    "drive_id": "1LiZYI8lbpCcABzIZRYtTD3Kr2_YPy7Nq",
+    "source_title": "S5_Uniform_Attention_Decoupled_Head.ipynb"
+  },
+  {
+    "file": "notebooks/rebuttal/Uniform_Attention_Matched_LR_Sweep_log5.ipynb",
+    "drive_id": "10KiqCyky-6PmuQgWDAYRya3bIcIVQxFR",
+    "source_title": "Uniform_Attention_Matched_LR_Sweep_log5.ipynb"
+  },
+  {
+    "file": "notebooks/rebuttal/Addition_Rebuttal_Matched_LR_Sweep.ipynb",
+    "drive_id": "19khE96moYzHKZnZ8-lXxJKSMYSYPYfAD",
+    "source_title": "Addition_Rebuttal_Matched_LR_Sweep.ipynb"
+  },
+  {
+    "file": "notebooks/rebuttal/A5_FourWay_Final_PaperAligned_No_WD.ipynb",
+    "drive_id": "1b90_TEz5HL0MqUEq5YEh5FyhNkGe2hkv",
+    "source_title": "A5_FourWay_Final_PaperAligned_No_WD"
+  },
+  {
+    "file": "notebooks/rebuttal/A5_FourWay_Final_PaperAligned_Colab.ipynb",
+    "drive_id": "1B5RpyT5RYN6EyiRkegHpgZ9dH3gdgXyI",
+    "source_title": "A5_FourWay_Final_PaperAligned_Colab.ipynb"
+  },
+  {
+    "file": "notebooks/rebuttal/Q1_5epoch_Onset_Zoom.ipynb",
+    "drive_id": "11FrSzOR1ScRAploI-sIigHjJoA7hEPXY",
+    "source_title": "Q1_5epoch_Onset_Zoom.ipynb"
+  },
+  {
+    "file": "notebooks/rebuttal/Q1_Temporal_Mechanism_and_Topology.ipynb",
+    "drive_id": "1YHFFm6rPK915XZRpBG6bTuJ0SsjY-qMT",
+    "source_title": "Q1_Temporal_Mechanism_and_Topology.ipynb"
+  },
+  {
+    "file": "notebooks/rebuttal/S5_Sweep_Results_table.ipynb",
+    "drive_id": "1nztNRrZI5Xos4moo-5GNKivlEqwgGMZX",
+    "source_title": "S5_Sweep_Results_table.ipynb"
+  },
+  {
+    "file": "notebooks/rebuttal/Addition_Rebuttal_Ablations_with_Robustness_Sweep_last2_added.ipynb",
+    "drive_id": "1hlijIpVhZNtEJ9xbj8-NKMlNoB9-wW66",
+    "source_title": "Addition_Rebuttal_Ablations_with_Robustness_Sweep_last2_added"
+  },
+  {
+    "file": "notebooks/rebuttal/Addition_Rebuttal_Ablations_with_Robustness_Sweep.ipynb",
+    "drive_id": "1lRmgvVAhA9fZXjynHe_goNy5ienvsY6Y",
+    "source_title": "Addition_Rebuttal_Ablations_with_Robustness_Sweep.ipynb"
+  },
+  {
+    "file": "notebooks/rebuttal/Addition_Rebuttal_Ablations_v1_Final.ipynb",
+    "drive_id": "1TOruiBjTWOLMoN27uPYZ5-3mViiTfvc4",
+    "source_title": "Addition_Rebuttal_Ablations_v1_Final"
+  },
+  {
+    "file": "notebooks/rebuttal/S5_Sweep_Final_Colab_v7_head_controls_final.ipynb",
+    "drive_id": "1Op0V70Cj0hjf26Bg38xoCAG6GTKqdeqh",
+    "source_title": "S5_Sweep_Final_Colab_v7_head_controls_final"
+  },
+  {
+    "file": "notebooks/rebuttal/S5_Sweep_Final_Colab_v7_head_controls_10seed.ipynb",
+    "drive_id": "1sERf8SGzy-f20XnslNe6gl0oPHgMzycp",
+    "source_title": "S5_Sweep_Final_Colab_v7_head_controls_10seed"
+  },
+  {
+    "file": "notebooks/rebuttal/full_results_rebuttal.ipynb",
+    "drive_id": "1iLlmCifivFNT0b6A9ri320F_oYjQ8BkG",
+    "source_title": "full results rebuttal.ipynb"
+  },
+  {
+    "file": "notebooks/rebuttal/Addition_Rebuttal_Ablations_v1__LN_bounded_unbounded.ipynb",
+    "drive_id": "1Y_w79qLjBl-CLasy0pQXZhVyjlfJdaYH",
+    "source_title": "Addition_Rebuttal_Ablations_v1__LN_bounded_unbounded"
+  },
+  {
+    "file": "notebooks/rebuttal/S5_Sweep_Final_Colab_v6_posthocfix.ipynb",
+    "drive_id": "10lwAwhTcFc29tAQaTnxaRs7Mw8ZiX6Nv",
+    "source_title": "S5_Sweep_Final_Colab_v6_posthocfix.ipynb"
+  }
+]

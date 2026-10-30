@@ -1,0 +1,65 @@
+Drive already mounted at /content/drive; to attempt to forcibly remount, call drive.mount("/content/drive", force_remount=True).
+Device: cuda
+Saving to: /content/grokking_q1_onset_zoom_5epoch
+3 configurations x 3 seeds = 9 runs
+
+starting: q1_layernorm_bounded_wd1_seed1
+saved: q1_layernorm_bounded_wd1_seed1
+{'config': 'q1_layernorm_bounded_wd1', 'seed': 1, 'model_type': 'layernorm', 'bounded_head': True, 'tau': 10.0, 'weight_decay': 1.0, 'lr': 0.0006, 'max_epochs': 20000, 'stop_reason': 'post_99_grace_complete', 'elapsed_seconds': 70.38902354240417, 'last_epoch': 8355, 'peak_test_acc': 0.9995525479316711, 'first_sustained_test_rise': 5105, 'train_epoch_95': 635, 'test_epoch_95': 6830, 'gap_95': 6195, 'train_epoch_99': 870, 'test_epoch_99': 7355, 'gap_99': 6485, 'train_epoch_100': 1760, 'test_epoch_100': None, 'gap_100': None}
+
+starting: q1_layernorm_bounded_wd1_seed2
+saved: q1_layernorm_bounded_wd1_seed2
+{'config': 'q1_layernorm_bounded_wd1', 'seed': 2, 'model_type': 'layernorm', 'bounded_head': True, 'tau': 10.0, 'weight_decay': 1.0, 'lr': 0.0006, 'max_epochs': 20000, 'stop_reason': 'post_99_grace_complete', 'elapsed_seconds': 61.798633098602295, 'last_epoch': 7425, 'peak_test_acc': 1.0, 'first_sustained_test_rise': 3935, 'train_epoch_95': 535, 'test_epoch_95': 6175, 'gap_95': 5640, 'train_epoch_99': 605, 'test_epoch_99': 6425, 'gap_99': 5820, 'train_epoch_100': 925, 'test_epoch_100': 6875, 'gap_100': 5950}
+
+starting: q1_layernorm_bounded_wd1_seed3
+saved: q1_layernorm_bounded_wd1_seed3
+{'config': 'q1_layernorm_bounded_wd1', 'seed': 3, 'model_type': 'layernorm', 'bounded_head': True, 'tau': 10.0, 'weight_decay': 1.0, 'lr': 0.0006, 'max_epochs': 20000, 'stop_reason': 'post_99_grace_complete', 'elapsed_seconds': 75.95784091949463, 'last_epoch': 9100, 'peak_test_acc': 0.9976508021354675, 'first_sustained_test_rise': 4360, 'train_epoch_95': 655, 'test_epoch_95': 6865, 'gap_95': 6210, 'train_epoch_99': 720, 'test_epoch_99': 8100, 'gap_99': 7380, 'train_epoch_100': 1415, 'test_epoch_100': None, 'gap_100': None}
+
+starting: q1_sphere_bounded_wd1_seed1
+saved: q1_sphere_bounded_wd1_seed1
+{'config': 'q1_sphere_bounded_wd1', 'seed': 1, 'model_type': 'spherical', 'bounded_head': True, 'tau': 10.0, 'weight_decay': 1.0, 'lr': 0.0006, 'max_epochs': 20000, 'stop_reason': 'stable_test_100', 'elapsed_seconds': 6.893972396850586, 'last_epoch': 790, 'peak_test_acc': 1.0, 'first_sustained_test_rise': 310, 'train_epoch_95': 315, 'test_epoch_95': 495, 'gap_95': 180, 'train_epoch_99': 365, 'test_epoch_99': 520, 'gap_99': 155, 'train_epoch_100': 425, 'test_epoch_100': 570, 'gap_100': 145}
+
+starting: q1_sphere_bounded_wd1_seed2
+saved: q1_sphere_bounded_wd1_seed2
+{'config': 'q1_sphere_bounded_wd1', 'seed': 2, 'model_type': 'spherical', 'bounded_head': True, 'tau': 10.0, 'weight_decay': 1.0, 'lr': 0.0006, 'max_epochs': 20000, 'stop_reason': 'stable_test_100', 'elapsed_seconds': 8.370303869247437, 'last_epoch': 955, 'peak_test_acc': 1.0, 'first_sustained_test_rise': 280, 'train_epoch_95': 305, 'test_epoch_95': 705, 'gap_95': 400, 'train_epoch_99': 380, 'test_epoch_99': 750, 'gap_99': 370, 'train_epoch_100': 495, 'test_epoch_100': 860, 'gap_100': 365}
+
+starting: q1_sphere_bounded_wd1_seed3
+saved: q1_sphere_bounded_wd1_seed3
+{'config': 'q1_sphere_bounded_wd1', 'seed': 3, 'model_type': 'spherical', 'bounded_head': True, 'tau': 10.0, 'weight_decay': 1.0, 'lr': 0.0006, 'max_epochs': 20000, 'stop_reason': 'stable_test_100', 'elapsed_seconds': 15.411772966384888, 'last_epoch': 1770, 'peak_test_acc': 1.0, 'first_sustained_test_rise': 330, 'train_epoch_95': 305, 'test_epoch_95': 1165, 'gap_95': 860, 'train_epoch_99': 385, 'test_epoch_99': 1315, 'gap_99': 930, 'train_epoch_100': 510, 'test_epoch_100': 1675, 'gap_100': 1165}
+
+starting: q1_sphere_bounded_wd0_seed1
+saved: q1_sphere_bounded_wd0_seed1
+{'config': 'q1_sphere_bounded_wd0', 'seed': 1, 'model_type': 'spherical', 'bounded_head': True, 'tau': 10.0, 'weight_decay': 0.0, 'lr': 0.0006, 'max_epochs': 20000, 'stop_reason': 'stable_test_100', 'elapsed_seconds': 15.577256202697754, 'last_epoch': 1780, 'peak_test_acc': 1.0, 'first_sustained_test_rise': 280, 'train_epoch_95': 280, 'test_epoch_95': 795, 'gap_95': 515, 'train_epoch_99': 330, 'test_epoch_99': 910, 'gap_99': 580, 'train_epoch_100': 405, 'test_epoch_100': 1685, 'gap_100': 1280}
+
+starting: q1_sphere_bounded_wd0_seed2
+saved: q1_sphere_bounded_wd0_seed2
+{'config': 'q1_sphere_bounded_wd0', 'seed': 2, 'model_type': 'spherical', 'bounded_head': True, 'tau': 10.0, 'weight_decay': 0.0, 'lr': 0.0006, 'max_epochs': 20000, 'stop_reason': 'stable_test_100', 'elapsed_seconds': 10.503399133682251, 'last_epoch': 1200, 'peak_test_acc': 1.0, 'first_sustained_test_rise': 255, 'train_epoch_95': 275, 'test_epoch_95': 870, 'gap_95': 595, 'train_epoch_99': 320, 'test_epoch_99': 945, 'gap_99': 625, 'train_epoch_100': 390, 'test_epoch_100': 1105, 'gap_100': 715}
+
+starting: q1_sphere_bounded_wd0_seed3
+saved: q1_sphere_bounded_wd0_seed3
+{'config': 'q1_sphere_bounded_wd0', 'seed': 3, 'model_type': 'spherical', 'bounded_head': True, 'tau': 10.0, 'weight_decay': 0.0, 'lr': 0.0006, 'max_epochs': 20000, 'stop_reason': 'stable_test_100', 'elapsed_seconds': 35.56400108337402, 'last_epoch': 4080, 'peak_test_acc': 1.0, 'first_sustained_test_rise': 255, 'train_epoch_95': 260, 'test_epoch_95': 2815, 'gap_95': 2555, 'train_epoch_99': 305, 'test_epoch_99': 3325, 'gap_99': 3020, 'train_epoch_100': 410, 'test_epoch_100': 3985, 'gap_100': 3575}
+
+Per-run results:
+                  config  seed model_type  bounded_head  tau  weight_decay     lr  max_epochs            stop_reason  elapsed_seconds  last_epoch  peak_test_acc  first_sustained_test_rise  train_epoch_95  test_epoch_95  gap_95  train_epoch_99  test_epoch_99  gap_99  train_epoch_100  test_epoch_100  gap_100
+q1_layernorm_bounded_wd1     1  layernorm          True 10.0           1.0 0.0006       20000 post_99_grace_complete        70.389024        8355       0.999553                       5105             635           6830    6195             870           7355    6485             1760             NaN      NaN
+q1_layernorm_bounded_wd1     2  layernorm          True 10.0           1.0 0.0006       20000 post_99_grace_complete        61.798633        7425       1.000000                       3935             535           6175    5640             605           6425    5820              925          6875.0   5950.0
+q1_layernorm_bounded_wd1     3  layernorm          True 10.0           1.0 0.0006       20000 post_99_grace_complete        75.957841        9100       0.997651                       4360             655           6865    6210             720           8100    7380             1415             NaN      NaN
+   q1_sphere_bounded_wd0     1  spherical          True 10.0           0.0 0.0006       20000        stable_test_100        15.577256        1780       1.000000                        280             280            795     515             330            910     580              405          1685.0   1280.0
+   q1_sphere_bounded_wd0     2  spherical          True 10.0           0.0 0.0006       20000        stable_test_100        10.503399        1200       1.000000                        255             275            870     595             320            945     625              390          1105.0    715.0
+   q1_sphere_bounded_wd0     3  spherical          True 10.0           0.0 0.0006       20000        stable_test_100        35.564001        4080       1.000000                        255             260           2815    2555             305           3325    3020              410          3985.0   3575.0
+   q1_sphere_bounded_wd1     1  spherical          True 10.0           1.0 0.0006       20000        stable_test_100         6.893972         790       1.000000                        310             315            495     180             365            520     155              425           570.0    145.0
+   q1_sphere_bounded_wd1     2  spherical          True 10.0           1.0 0.0006       20000        stable_test_100         8.370304         955       1.000000                        280             305            705     400             380            750     370              495           860.0    365.0
+   q1_sphere_bounded_wd1     3  spherical          True 10.0           1.0 0.0006       20000        stable_test_100        15.411773        1770       1.000000                        330             305           1165     860             385           1315     930              510          1675.0   1165.0
+
+Five-epoch onset comparison:
+                  config  seed  logging_resolution  test_rise  train_acc_at_rise  test_acc_at_rise  train99  train100  rise_minus_train99  rise_minus_train100
+q1_layernorm_bounded_wd1     1                   5       5105           0.699739          0.109744      870      1760                4235                 3345
+q1_layernorm_bounded_wd1     2                   5       3935           0.633420          0.100571      605       925                3330                 3010
+q1_layernorm_bounded_wd1     3                   5       4360           0.666057          0.113436      720      1415                3640                 2945
+   q1_sphere_bounded_wd1     1                   5        310           0.946997          0.104374      365       425                 -55                 -115
+   q1_sphere_bounded_wd1     2                   5        280           0.918538          0.103032      380       495                -100                 -215
+   q1_sphere_bounded_wd1     3                   5        330           0.969452          0.102360      385       510                 -55                 -180
+   q1_sphere_bounded_wd0     1                   5        280           0.954830          0.100571      330       405                 -50                 -125
+   q1_sphere_bounded_wd0     2                   5        255           0.923499          0.101801      320       390                 -65                 -135
+   q1_sphere_bounded_wd0     3                   5        255           0.949608          0.102584      305       410                 -50                 -155
+

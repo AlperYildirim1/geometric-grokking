@@ -1,0 +1,10 @@
+config,seed,logging_resolution,test_rise,train_acc_at_rise,test_acc_at_rise,train99,train100,rise_minus_train99,rise_minus_train100
+q1_layernorm_bounded_wd1,1,5,5105,0.699739,0.109744,870,1760,4235,3345
+q1_layernorm_bounded_wd1,2,5,3935,0.633420,0.100571,605,925,3330,3010
+q1_layernorm_bounded_wd1,3,5,4360,0.666057,0.113436,720,1415,3640,2945
+q1_sphere_bounded_wd1,1,5,310,0.946997,0.104374,365,425,-55,-115
+q1_sphere_bounded_wd1,2,5,280,0.918538,0.103032,380,495,-100,-215
+q1_sphere_bounded_wd1,3,5,330,0.969452,0.102360,385,510,-55,-180
+q1_sphere_bounded_wd0,1,5,280,0.954830,0.100571,330,405,-50,-125
+q1_sphere_bounded_wd0,2,5,255,0.923499,0.101801,320,390,-65,-135
+q1_sphere_bounded_wd0,3,5,255,0.949608,0.102584,305,410,-50,-155
